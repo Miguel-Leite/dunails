@@ -1,101 +1,74 @@
-import Image from "next/image";
+import { CardService } from "@/components/card-service";
+import { QuoteLeftIcon } from "@/components/icons/quote-left";
+import { QuoteRightIcon } from "@/components/icons/quote-right";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <section className="min-h-screen font-[family-name:var(--font-imperial-script)]">
+      <div className="w-full flex items-center justify-center my-10">
+        <h1 className="text-[6.25rem] text-red-800 text-center font-imperial">
+          Dunails Perfeitas
+        </h1>
+      </div>
+      <main className="bg-hero-background bg-no-repeat bg-cover w-full min-h-[32.5rem] mb-14"></main>
+      <div className="container mb-14">
+        <div className="space-y-5 max-w-[51.688rem] mx-auto text-center">
+          <h2 className="font-abhaya text-red-800 font-bold text-5xl">
+            A elegância vem de ser tão bonito por dentro quanto por fora
+          </h2>
+          <p className="text-zinc-500 text-base">
+            Eleifend arcu non lorem justo in tempus purus gravida. Est tortor
+            egestas sed feugiat elementum. Viverra nulla amet a ultrices massa
+            dui. Tortor est purus morbi vitae arcu suspendisse amet.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div className="grid grid-cols-4 gap-x-6 mt-10">
+          <CardService
+            image="/images/card-1.jpg"
+            titile="Make up"
+            serviceType="make up"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <CardService
+            image="/images/card-2.jpg"
+            titile="Hair Styling"
+            serviceType="hair styling"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <CardService
+            image="/images/card-3.jpg"
+            titile="Manicure"
+            serviceType="manicure"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <CardService
+            image="/images/card-4.jpg"
+            titile="Cosmetologia"
+            serviceType="cosmetologia"
+          />
+        </div>
+      </div>
+
+      <section className="w-full mb-32">
+        <div className="min-h-[23.25rem] w-full py-10 bg-red-100">
+          <div className="flex flex-col gap-y-5 items-center justify-center">
+            <h2 className="font-abhaya text-red-800 font-bold text-5xl">
+              Depoimentos
+            </h2>
+            <p className="text-zinc-500 text-base">
+              Eleifend arcu non lorem justo in tempus purus gravida tortor
+              egestas sed feugiat elementum
+            </p>
+          </div>
+        </div>
+        <main className="w-[53.5rem] relative mx-auto -mt-44">
+          <div className="absolute -top-10 -left-12">
+            <QuoteLeftIcon />
+          </div>
+          <div className="w-full min-h-[23.25rem] bg-white rounded py-8"></div>
+          <div className="absolute -bottom-10 -right-6">
+            <QuoteRightIcon />
+          </div>
+        </main>
+      </section>
+    </section>
   );
 }
